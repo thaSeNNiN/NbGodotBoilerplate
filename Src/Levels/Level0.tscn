@@ -42,6 +42,17 @@ text = "ToggleSound"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Button" type="Button" parent="."]
+margin_left = 203.0
+margin_top = 134.0
+margin_right = 337.0
+margin_bottom = 200.0
+text = "Click me"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="button_up" from="ButtonBack" to="." method="_on_ButtonBack_button_up"]
 [connection signal="button_up" from="ButtonMusic" to="." method="_on_ButtonMusic_button_up"]
 [connection signal="button_up" from="ButtonSound" to="." method="_on_ButtonSound_button_up"]
+[connection signal="button_up" from="Button" to="." method="_on_ButtonTest_button_up"]

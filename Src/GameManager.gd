@@ -16,6 +16,7 @@ func _ready():
 	Events.connect_signal("switch_fullscreen", self, "_switchFullscreen")
 	Events.connect_signal("new_game", self, "_newGame")
 	Events.connect_signal("menu_back", self, "_backToMenu")
+	Events.connect("change_level", self, "_change_level")
 
 	switchTo(Types.GameStates.Menu)
 
@@ -50,6 +51,12 @@ func unloadLevel():
 func _backToMenu():
 	unloadLevel()
 	switchTo(Types.GameStates.Menu)
+
+# Event Hook: Change Level to level_index
+func _change_level(level_index) -> void:
+	unloadLevel()
+	loadLevel(level_index)
+
 
 # Event Hook: New Game
 func _newGame():

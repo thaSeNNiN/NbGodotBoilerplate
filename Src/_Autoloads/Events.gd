@@ -21,6 +21,7 @@ signal menu_back()
 signal switch_sound(value)
 signal switch_music(value)
 signal switch_fullscreen(value)
+signal change_level(level_index)
 
 ###############################################################################
 
